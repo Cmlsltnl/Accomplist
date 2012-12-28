@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+    
+    <div class = "jumbotron">
+        <h1>{{ page_title }}</h1>
+        {% if user.username %}
+        <p>Welcome {{ user.username }}!
+        Here you can store and share bookmarks!</p>
+        {% else %}
+        <p>Welcome anonymous user!
+        You need to <a href="/login/">login</a>
+        before you can store and share events.</p>
+        {% endif %}
+        <p>{{ page_content }}</p>
+     </div>
+{% endblock %}
