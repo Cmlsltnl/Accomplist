@@ -1,0 +1,83 @@
+{% if events %}
+
+<div id="events">
+
+{% for event in events %}
+
+  <div class="well">
+    <div id="event-list">
+    
+    <div class="title">
+        <h5>{{ event.title }}</h5> 
+    </div>
+
+    
+
+     
+    
+    <div class="tags">
+    {% if show_tags %}
+        <h5><ul>
+      {% if event.tag_set.all %}
+        {% for tag in event.tag_set.all %}
+          <li>
+            <a href="/tag/{{ tag.name|urlencode }}/">{{ tag.name }}</a>
+          </li>
+        {% endfor %}
+        
+      {% else %}
+        None.
+      {% endif %}
+         </ul></h5>
+    {% endif %}
+    </div>
+    
+
+       
+    <div class="user">
+      {% if show_user %}
+      <h5>Posted by: <a href="/user/{{ event.user.username }}/" class="username">{{ event.user.username }}</a></h5>
+      {% endif %}
+    </div>
+
+</div>
+</div>
+{% endfor %}
+
+</div>
+
+  {% if show_paginator %}
+
+  <div class="pagination">
+    <ul>
+  {% if has_prev %}
+    <li><a href="?page={{ prev_page }}">&laquo; Previous</a></li>
+  {% endif %}
+  {% for page in page_range %}
+    <li><a href="?page={{ page }}">{{ page }}</a></li>
+  {% endfor %}
+  {% if has_next %}
+  <li><a href="?page={{ next_page }}">Next &raquo;</a></li>
+  {% endif %}
+    </ul>
+    (Page {{ page }} of {{ pages }})
+</div>
+  {% endif %}
+   
+
+  {% else %}
+  <p>No Lists found.</p>
+  {% endif %}
+
+  
+  <!--
+  Live Edit for List Doesn't Work
+  
+  {% if show_edit %}
+      <a href="/save/?url={{ event.title|urlencode }}" class="edit">[edit]</a>
+    {% endif %} 
+  -->
+    
+ 
+
+

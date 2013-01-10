@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block external %}
+<script type="text/javascript" src="/static/js/search.js"></script>
+{% endblock %}
+
+{% block content %}
+<div id="searchbutton">
+<div class="well">
+
+
+
+<form id="search-form" method="get" action=".">
+    {{ form.as_p }}
+    <input type="submit" value="search" />
+</form>
+
+
+<div id="search-results">
+    {% if show_results %}
+    {% include "event_list.html" %}
+    {% endif %}
+</div>
+
+
+
+   {% if show_paginator %}
+
+  <div class="pagination">
+    <ul>
+  {% if has_prev %}
+    <li><a href="?page={{ prev_page }}">&laquo; Previous</a></li>
+  {% endif %}
+  {% for page in page_range %}
+    <li><a href="?page={{ page }}">{{ page }}</a></li>
+  {% endfor %}
+  {% if has_next %}
+  <li><a href="?page={{ next_page }}">Next &raquo;</a></li>
+  {% endif %}
+    </ul>
+    (Page {{ page }} of {{ pages }})
+</div>
+  {% endif %}
+  </div>
+</div>
+{% endblock %}

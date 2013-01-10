@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block external %}
+<link rel="stylesheet" href="/static/js/jquery.autocomplete.css" type="text/css" />
+<script type="text/javascript" src="/static/js/jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="/static/js/tag_autocomplete.js"></script>
+{% endblock %}
+{% block content %}
+
+<h2>Please Provide Some Profile Information. Thank You!</h2>
+<div>
+	{% if form.is_multipart %}
+    <form enctype="multipart/form-data" method="post" action=".">
+	{% else %}
+    <form method="post" action=".">
+	{% endif %}
+	   	{% csrf_token %}
+   		{{ form.as_p }}
+    	<input type="submit" value="save" />
+	</form>
+<div>
+{% endblock %}

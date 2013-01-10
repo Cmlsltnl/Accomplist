@@ -1,0 +1,44 @@
+{% if shared_events %}
+<div class="well">
+    <table class="table table-condensed">
+      <caption><h3>Recently Shared By Users:</h3></caption>
+        <thead>
+            <tr>
+              <th>Title</th>
+              <th>User</th>
+              <th></th>
+              <th></th>
+              <th>Votes</th>
+            </tr>
+        </thead>
+    <tbody>
+    
+
+{% for shared_event in shared_events %}
+    <tr>
+        <td><h5><a href="/events/{{ shared_event.id|urlencode }}" class="title">{{ shared_event.event.title }}</a></h5> </td>
+        <td><h5><a href="/user/{{ shared_event.event.user.username }}/" class="username">{{ shared_event.event.user.username }}</a></h5></td>
+        
+        <td><h5><a href="/vote/?id={{ shared_event.id }}"class="vote">[++]</a></h5></td>
+        <td><h5><a href="/events/{{ shared_event.id }}/">Comments</a></h5></td>
+        <td><h5 class="vote-count">{{ shared_event.votes }}</h5></td>
+    </tr>
+   
+  <!--
+  Live Edit for List Doesn't Work
+  
+  {% if show_edit %}
+      <a href="/save/?url={{ event.title|urlencode }}" class="edit">[edit]</a>
+    {% endif %} 
+  -->
+    
+  
+{% endfor %}
+    
+    </tbody>
+</table>
+  
+
+  {% else %}
+  <p>No Lists found.</p>
+  {% endif %}

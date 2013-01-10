@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/static/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/static/css/custom.css" type="text/css" />
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+    {% block external %}
+    {% endblock %}
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <!-- Fav and touch icons -->
+
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+    <body>
+
+
+      <!-- /container -->
+<div class="container-fluid">
+            
+  <div class="row">
+
+    <div class="span6">        
+
+        <h1>Accomplist</h1>
+            <img src="/static/img/scenic.jpg" class="img-polaroid">
+            <blockquote>
+                <h3>“The purpose of life, after all, is to live it, to taste experience to the utmost, to reach out eagerly and without fear for newer and richer experiences.”</h3>
+                <small>Eleanor Roosevelt</small>
+            </blockquote>
+    </div>
+    
+<!--  {% if user.username %}
+        <h3>Welcome {{ user.username }}! Here you can store and share the things you want to accomplish!</h3>
+        {% else %}
+        <h3>Welcome! You need to <a href="/login/">login</a> or <a href="/register"> register</a>before you can store and share your Accomplist!</h3>
+        {% endif %} -->
+     
+       
+<div class="span3">
+    
+
+
+</div>
+
+<div class="span3" id="register">
+
+    
+    <div class="well">
+    	<h4>Register To Make Your List!</h4>
+        <hr>
+ 
+	<form method="post" action=".">	
+	  {% csrf_token %}
+		{{ form.as_p }}
+		<input type="hidden" name="next" value="/home/"/>
+	<br>
+		<button class="btn btn-success pull-right" type="submit" value="register"/>Register</button> 
+	</form>
+ </div>
+</div> 
+
+
+</div> 
+ 
+ </div>
+
+
+
+
+
+     
+
+        
+    
+      
+
+      <div class="footer">
+        <p>&copy; Accomplist 2013</p>
+      </div>
+
+</div> 
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap-transition.js"></script>
+    <script src="/static/js/bootstrap-alert.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-modal.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-dropdown.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-scrollspy.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-tab.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-tooltip.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-popover.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-button.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-collapse.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-carousel.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
+
+

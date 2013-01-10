@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load comments %}
+{% block external %}
+<title>Event:{{ shared_event.event.title }}</title>
+{% endblock %}
+
+
+{% block content %}
+<div class="well">
+<a href="/vote/?id={{ shared_event.id }}" class="vote">[+]</a>
+<a href="{{ shared_event.event.title }}" class="title">{{ shared_event.event.title }}</a>
+Posted By:<a href="/user/{{ shared_event.event.user.username }}/" class="username">
+{{ shared_event.event.user.username }}</a> |
+<span class="vote-count">Votes: {{ shared_event.votes }}</span>
+</div>
+
+<h2>Comments</h2>
+{% get_comment_count for events.sharedevent shared_event.id as comment_count %}
+{% get_comment_list for events.sharedevent shared_event.id as comment_list %}
+{% for comment in comment_list %}
+<div class="comment">
+<p><b>{{ comment.user.username }}</b> said:</p>
+{{ comment.comment|escape|linebreaks }}
+</div>
+{% endfor %}
+<p>Number of comments: {{ comment_count }}</p>
+{% render_comment_form for events.sharedevent shared_event.id %}
+{% endblock %}
