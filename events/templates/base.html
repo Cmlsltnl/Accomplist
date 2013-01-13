@@ -43,7 +43,7 @@
                         
                     {% if user.is_authenticated %}
                             <li ><a href="/logout/">Logout</a></li>
-                            <li ><a href="/save/">Settings</a></li>
+                            <li ><a href="/settings/user">Settings</a></li>
                             <li ><a href="/user/{{ user.username }}/">My Profile</a></li>
                             <li ><a href="/save/">Create</a></li>
                             <li ><a href="/search/">Search</a></li>
@@ -52,6 +52,7 @@
                             <li ><a href="/login/">Login</a></li>
                             <li ><a href="/register/">Sign Up</a></li>
                     {% endif %}
+                            <li><a href="/tag/">Trending Tags</a></li>
                             <li><a href="/popular/">Popular</a></li>
                             
         </ul>
@@ -59,7 +60,7 @@
                   
 
 <!-- /container -->
-        <div class="container-fluid">
+        <div class="container">
             
 
                 
@@ -82,10 +83,7 @@
     
       
 
-      <div class="footer">
-        <p>&copy; Accomplist 2013</p>
-      </div>
-
+      
     </div> 
 
     <!-- Le javascript

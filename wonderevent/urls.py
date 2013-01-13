@@ -25,7 +25,13 @@ urlpatterns = patterns('',
 
         url(r'^user/profile/(\w+)/$',edit_profile_page),
 
-    url(r'^register/$', register_page),
+        url(r'^settings/user$',direct_to_template, {'template': 'settings/settings.html'}),
+
+        url(r'^settings/user/password/$', 'django.contrib.auth.views.password_change', {'post_change_redirect': '/settings/user/password-changed'}),
+
+        url(r'^settings/user/password-changed$', direct_to_template, {'template': 'registration/password_change_done.html'}),
+    
+        url(r'^register/$', register_page),
 
         url(r'^register/success/$', direct_to_template,
         {'template': 'registration/register_success.html'}),
@@ -42,8 +48,7 @@ urlpatterns = patterns('',
 
     url(r'^login/$', 'django.contrib.auth.views.login'),
 
-     url(r'^home/$', direct_to_template,
-        {'template': 'home.html'}),
+     url(r'^home/$', home_page),
 
     url(r'^logout/$', logout_page),
 
@@ -58,5 +63,3 @@ urlpatterns = patterns('',
     url(r'^messages/', include('messages.urls')),
 
 )
-
-urlpatterns += staticfiles_urlpatterns()

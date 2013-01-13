@@ -6,13 +6,40 @@
 
 
 {% block content %}
+
 <div class="well">
-<a href="/vote/?id={{ shared_event.id }}" class="vote">[+]</a>
-<a href="{{ shared_event.event.title }}" class="title">{{ shared_event.event.title }}</a>
-Posted By:<a href="/user/{{ shared_event.event.user.username }}/" class="username">
-{{ shared_event.event.user.username }}</a> |
-<span class="vote-count">Votes: {{ shared_event.votes }}</span>
-</div>
+    <table class="table table-condensed">
+      <caption><h3></h3></caption>
+        <thead>
+            <tr>
+              <th>Title</th>
+              <th>User</th>
+              <th></th>
+              <th></th>
+              <th>Votes</th>
+            </tr>
+        </thead>
+    <tbody>
+    
+
+    <tr>
+        <td><h5><a href="/events/{{ shared_event.id|urlencode }}" class="title">{{ shared_event.event.title }}</a></h5> </td>
+        <td><h5><a href="/user/{{ shared_event.event.user.username }}/" class="username">{{ shared_event.event.user.username }}</a></h5></td>
+           
+        <td><h5><a href="/events/{{ shared_event.id }}/"><img id="conversation" src="/static/img/conversation.svg"/></a></h5></td>
+         <td><h5><a href="/vote/?id={{ shared_event.id }}"class="vote"><img id="vote_arrow" src="/static/img/arrow.svg"/></a></h5></td>
+        <td><h5 class="vote-count">{{ shared_event.votes }}</h5></td>
+    </tr>
+    
+    
+    </tbody>
+</table>
+
+<h5>{{ shared_event.event.description }}</h5>
+<br>
+  
+
+ 
 
 <h2>Comments</h2>
 {% get_comment_count for events.sharedevent shared_event.id as comment_count %}

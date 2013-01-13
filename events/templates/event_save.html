@@ -7,11 +7,30 @@
 {% endblock %}
 {% block content %}
 
-<div id="submissionForm">
-	<form method="post" action=".">
-    	{% csrf_token %}
-   		{{ form.as_p }}
-    	<input type="submit" value="save" />
-	</form>
-<div>
+  <div class="well" id="eventsave">
+
+  	<div class="span5" id="instructions">
+  		<h2>Instructions:</h2>
+  		<h5>1) Pick the title ----></h5>
+  		<p>"I want to take a cruise to Cancun"</p>
+  		<br>
+  		<h5>2) Describe in more detail  ----></h5>
+  		<p>"This summer want to take a cruise to Cancun, Mexico with my best friends. I want to explore the amazing beaches and go parasailing! I want to enjoy the delicious Mexican cuisine and live in the moment"</p>
+  		<br>
+  		<br>
+  		<br>
+  		<br>
+  		<br>
+  		<h5>3) Tag it! (limit 5)  ----></h5>
+  		<p>"Cancun, Parasailing, Food, Mexican, Beaches"</p>
+  	</div>
+
+	<div class="span4" id="saveform">
+		<form method="post" action=".">
+    		{% csrf_token %}
+   			{{ form.as_p }}
+    		<input type="submit" value="save" />
+		</form>
+	</div>
+  </div>
 {% endblock %}

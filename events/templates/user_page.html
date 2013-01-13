@@ -4,14 +4,14 @@
  {% load avatar_tags %}
     
 
-  <div id="profile">
+  <div class="well" id="profile">
     {% csrf_token %}
      {% avatar username %}
-    <a href="https://en.gravatar.com/site/login">Change your avatar</a>
-    <h4>{{userprofile.firstName}} {{userprofile.lastName}} - "{{userprofile.tagline}}"</h4>
+    
+    <h4>{{userprofile.firstName}} {{userprofile.lastName}}</h4>
+    <h4> "{{userprofile.tagline}}"</h4>
     <button class="btn btn-primary"><a id="add" href="/save/">Add Items</a></button>
-     {% load inbox %}
-    <h3>Messages: {% inbox_count %}</h3>
+     
   </div>
 
   <h2 id="profiletitle">{{username}}'s Accomplist</h2>

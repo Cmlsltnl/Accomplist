@@ -8,21 +8,12 @@
         {% endif %} -->
     
         
-    <div class="well" id="getstarted">
-       
-
     
-  
-   
-    <div id="sharedLists">
-        <div id="tag-cloud">
-             <h2>Trending Tags:</h2>
-                {% for tag in tags %}
-                <a href="/tag/{{ tag.name|urlencode }}/" class="tag-cloud-{{ tag.weight }}">{{ tag.name }}</a>
-                {% endfor %}
-        </div>
-        {% include "shared_event_list.html" %}
-    </div>
+       
+     
+ 
+          {% include "shared_event_list.html" %}
+        
 
 
     

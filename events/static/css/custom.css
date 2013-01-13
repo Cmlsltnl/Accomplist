@@ -11,7 +11,7 @@
 /* Navbar */
 .topbar{
 background: url(/static/img/use_your_illusion.png); 
-height: 150px;
+height: 130px;
 margin-top: 0px;
 position: relative;
 bottom: 20px;
@@ -41,6 +41,7 @@ bottom: 20px;
   float: right;
   position: relative;
   right: 100px;
+  bottom: 20px;
 }
 
 
@@ -115,9 +116,8 @@ bottom: 20px;
 #tag-cloud {
  text-align: center;
  float: right;
- width:300px;
- position: relative;
- right:160px;
+ width:1000px;
+ 
 }
 #tag-cloud a {
  margin: 0 0.2em;
@@ -142,10 +142,7 @@ bottom: 20px;
   top: 50px;
     } 
 
-#submissionForm{
-  position: relative;
-  left: 300px;
-}
+
 
 /* Comment Form */
 
@@ -166,7 +163,9 @@ bottom: 20px;
   margin-right: 30px;
 }
 
-
+#vote_arrow{
+  height:25px;
+}
 
 
 
@@ -189,8 +188,7 @@ width:1200px;
 }
 
 #event-list{
-  height:20px;
-  width:1100px;
+ 
   
 }
 
@@ -344,11 +342,11 @@ padding: 0;
 
 #searchbutton{
   
-  margin-top: 100px;
+  margin-top: 0px;
 }
 
-#searchbutton form{
-  display: inline;
+#searchform{
+  display: inline-block;
 }
 
 /* Profile Page */ 
@@ -374,7 +372,7 @@ padding: 0;
   top: 13px;
 }
 
-#profile h2{
+#profiletitle{
   text-align: center;
 }
 
@@ -399,4 +397,20 @@ padding: 0;
   color:white;
   text-decoration: none;
   
+}
+
+/* Event Save Page */ 
+
+#instructions h2, h5, p{
+  text-align: center;
+}
+
+#saveform {
+  position: relative;
+  right: 20px;
+  margin-top: 30px;
+}
+
+#eventsave{
+  height: 525px;
 }

@@ -44,6 +44,20 @@ def main_page(request):
     })
     return render_to_response('main_page.html', variables)
 
+@login_required
+def home_page(request):
+
+    
+
+#SHAREDEVENTS
+    shared_events = SharedEvent.objects.order_by('-date')[:10]
+    variables = RequestContext(request, {
+               'user': request.user,
+               'shared_events': shared_events,
+    })
+    return render_to_response('main_page.html', variables)
+
+
 
 @login_required
 def user_page(request, username):
@@ -279,8 +293,8 @@ def event_vote_page(request):
 def popular_page(request):
     today = datetime.today()
     yesterday = today - timedelta(1)
-    shared_events = SharedEvent.objects.filter(date__gt=yesterday)
-    shared_events = shared_events.order_by('-votes')[:10]
+    #shared_events = SharedEvent.objects.filter(date__gt=yesterday)
+    shared_events = SharedEvent.objects.order_by('-votes')[:20]
     variables = RequestContext(request, {'shared_events': shared_events})
     return render_to_response('popular_page.html', variables)
 
@@ -314,4 +328,4 @@ def edit_profile_page(request,username):
             'form': form })
     return render_to_response('profile_edit.html', variables)
 
-    
+

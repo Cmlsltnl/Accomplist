@@ -1,7 +1,7 @@
 {% if shared_events %}
 <div class="well">
     <table class="table table-condensed">
-      <caption><h3>Recently Shared By Users:</h3></caption>
+      <caption><h3></h3></caption>
         <thead>
             <tr>
               <th>Title</th>
@@ -18,9 +18,9 @@
     <tr>
         <td><h5><a href="/events/{{ shared_event.id|urlencode }}" class="title">{{ shared_event.event.title }}</a></h5> </td>
         <td><h5><a href="/user/{{ shared_event.event.user.username }}/" class="username">{{ shared_event.event.user.username }}</a></h5></td>
-        
-        <td><h5><a href="/vote/?id={{ shared_event.id }}"class="vote">[++]</a></h5></td>
-        <td><h5><a href="/events/{{ shared_event.id }}/">Comments</a></h5></td>
+           
+        <td><h5><a href="/events/{{ shared_event.id }}/"><img id="conversation" src="/static/img/conversation.svg"/></a></h5></td>
+         <td><h5><a href="/vote/?id={{ shared_event.id }}"class="vote"><img id="vote_arrow" src="/static/img/arrow.svg"/></a></h5></td>
         <td><h5 class="vote-count">{{ shared_event.votes }}</h5></td>
     </tr>
    
