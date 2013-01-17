@@ -60,6 +60,6 @@ urlpatterns = patterns('',
 
     
 
-    url(r'^messages/', include('messages.urls')),
+    
 
 )
