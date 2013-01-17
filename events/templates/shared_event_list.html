@@ -20,7 +20,7 @@
         <td><h5><a href="/user/{{ shared_event.event.user.username }}/" class="username">{{ shared_event.event.user.username }}</a></h5></td>
          <td><h5><a href="/vote/?id={{ shared_event.id }}"class="vote"><img id="vote_arrow" src="/static/img/arrow.svg"/></a></h5></td>
            
-        <td><h5><a href="/events/{{ shared_event.id }}/"><img id="conversation" src="/static/img/conversation.svg"/></a></h5></td>
+        <td><h5><a href="/events/{{ shared_event.id|urlencode }}#disqus_thread"><img id="conversation" src="/static/img/conversation.svg"/></a></h5></td>
         
         <td><h5 class="vote-count">{{ shared_event.votes }}</h5></td>
     </tr>
