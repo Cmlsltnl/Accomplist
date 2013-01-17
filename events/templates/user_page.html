@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
- {% load avatar_tags %}
+ 
     
 
   <div class="well" id="profile">
     {% csrf_token %}
-     {% avatar username %}
+     
     
     <h4>{{userprofile.firstName}} {{userprofile.lastName}}</h4>
     <h4> "{{userprofile.tagline}}"</h4>
