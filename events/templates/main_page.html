@@ -6,23 +6,31 @@
         {% else %}
         <h3>Welcome! You need to <a href="/login/">login</a> or <a href="/register"> register</a>before you can store and share your Accomplist!</h3>
         {% endif %} -->
-    
-        
-    <div class="well" id="getstarted">
-       
+ 
+ <div class="well">
 
+    <h1 id="heading_main">Your Dreams. Your List!</h1>
+    <button id="signup" class="btn btn-large btn-primary" type="button"><a href="/register/">Sign Up!</a></button>
     
-  
-   
-    <div id="sharedLists">
-        <div id="tag-cloud">
-             <h2>Trending Tags:</h2>
-                {% for tag in tags %}
-                <a href="/tag/{{ tag.name|urlencode }}/" class="tag-cloud-{{ tag.weight }}">{{ tag.name }}</a>
-                {% endfor %}
-        </div>
-        {% include "shared_event_list.html" %}
-    </div>
+      <span id="title1">
+        <h1>Discover</h1>
+        <h2><small>Explore the ambitions of others.</small></h2>
+        <h2><small>Vote for the most interesting aspirations!</small></h2>
+      </span>
+
+    <img id="discover" class="img-polaroid" src="/static/img/discover.png"/>
+
+    <img id="create" class="img-polaroid" src="/static/img/create.png"/>
+
+        <span id="title2">
+            <h1>Create</h1>
+            <h2><small>Your Own List and Share It With Others</small></h2>
+            <h2><small></small></h2>
+        </span>
+
+     <button id="accomplish" class="btn btn-large btn-primary" type="button"><a href="/register/">Accomplish!</a></button>
+
+</div> 
 
 
     

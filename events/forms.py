@@ -16,9 +16,6 @@ class RegistrationForm(forms.Form):
             widget=forms.PasswordInput()
             )
 
-    zipcode = forms.IntegerField(
-            label = u'Zipcode')
-
     def clean_password2(self):
         if 'password1' in self.cleaned_data:
             password1 = self.cleaned_data['password1']

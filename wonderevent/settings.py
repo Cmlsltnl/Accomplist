@@ -129,7 +129,6 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.comments',
     'avatar',
-    'messages',
     'events',
 )
 
@@ -161,3 +160,6 @@ LOGGING = {
         },
     }
 }
+
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()

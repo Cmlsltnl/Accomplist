@@ -55,7 +55,7 @@ def home_page(request):
                'user': request.user,
                'shared_events': shared_events,
     })
-    return render_to_response('main_page.html', variables)
+    return render_to_response('home.html', variables)
 
 
 

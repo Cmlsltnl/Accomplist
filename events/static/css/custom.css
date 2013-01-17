@@ -115,8 +115,7 @@ bottom: 20px;
 /* Tag Cloud */
 #tag-cloud {
  text-align: center;
- float: right;
- width:1000px;
+ width:750px;
  
 }
 #tag-cloud a {
@@ -150,13 +149,17 @@ bottom: 20px;
 
 /* SharedEvents */
 
-#sharedLists{
+.sharedLists{
   float: right;
   margin-bottom: 0px;
   font-family: 'Monda', sans-serif;
-  width:600px;
+  width:750px;
+
 }
 
+.sharedLists #title{
+  text-align: center;
+}
 
 .sharedEvents h5{
   display: inline-block;
@@ -413,4 +416,69 @@ padding: 0;
 
 #eventsave{
   height: 525px;
+}
+
+
+
+/* Main Page */ 
+#title1{
+  position: relative;
+  top: 200px;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+#title2{
+  position: relative;
+  left: 640px;
+  bottom: 250px;
+  font-family: 'Shadows Into Light', cursive;
+
+}
+
+#discover{
+  width: 600px;
+  height: 400px;
+  position: relative;
+  left: 330px;
+  bottom: 75px;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+#create{
+  width: 600px;
+  height: 320px;
+  position: relative;
+  bottom: 10px;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+#accomplish{
+  position: relative;
+  right:400px;
+  bottom: 50px;
+  font-family: 'Shadows Into Light', cursive;
+}
+#accomplish a{
+  color: white;
+}
+
+#signup{
+  font-family: 'Shadows Into Light', cursive;
+  position: relative;
+  bottom: 50px;
+  
+}
+
+#signup a{
+color: white;
+}
+
+#heading_main{
+  
+   font-family: 'Shadows Into Light', cursive;
+   font-size: 60px;
+   margin-top: 50px;
+   margin-left: 20px;
+   position: relative;
+   left: 180px;
 }
