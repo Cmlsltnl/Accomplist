@@ -5,7 +5,7 @@ from django.core.files.storage import FileSystemStorage
 
 
 class Instance(models.Model):
-      listitem = models.CharField(max_length = 100)
+      listitem = models.CharField(max_length = 300)
       def __unicode__(self):
           return self.listitem
 
@@ -35,7 +35,7 @@ class UserProfile(models.Model):
       user = models.ForeignKey(User)
       firstName = models.CharField(max_length= 100)
       lastName = models.CharField(max_length= 100)
-      tagline = models.CharField(max_length = 100)
+      tagline = models.CharField(max_length = 300)
       def __unicode__(self):
           return u'%s, %s' % (self.firstName, self.lastName)
 
