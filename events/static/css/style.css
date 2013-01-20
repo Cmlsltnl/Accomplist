@@ -1,0 +1,575 @@
+ /* Base */
+
+ body {
+        padding-top: 20px;
+        padding-bottom: 60px;
+        background: url(/static/img/gray_jean.png); 
+        font-family: 'Monda', sans-serif;
+        
+      }
+
+body a{
+ 
+}
+
+
+/* Navbar */
+.topbar{
+background: url(/static/img/navyblue.png);  
+height: 130px;
+margin-top: 0px;
+position: relative;
+bottom: 20px;
+}
+
+.topbar_main{
+
+height: 130px;
+margin-top: 0px;
+position: relative;
+bottom: 20px;
+}
+
+.topbar_main #heading{
+
+color:black;
+}
+
+.topbar_main #nav a{
+  color:black;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.topbar_main #nav a:hover{
+  color:white;
+ 
+}
+
+
+#nav a:hover{
+  color:black;
+  
+}
+
+#nav a{
+  color:white;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+#heading{
+  color:white;
+   font-family: 'Shadows Into Light', cursive;
+   font-size: 70px;
+   margin-top: 50px;
+   margin-left: 20px;
+}
+
+#nav li{
+  float: right;
+  position: relative;
+  right: 100px;
+  bottom: 20px;
+}
+
+
+      /* Custom container */
+      .container {
+        margin: 0 auto;
+        max-width: 1000px;
+      }
+      .container > hr {
+        margin: 60px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 80px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 150px;
+        line-height: 1;
+      }
+      .jumbotron .lead {
+        font-size: 24px;
+        line-height: 1.25;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+.error{
+  color:red;
+}
+
+
+/* Main Page */ 
+
+#getstarted{
+  float: left;
+}
+
+
+
+
+
+/* Navbar Customization */
+.navbar{
+
+  
+  color: #000000;
+
+}
+     
+.nav li{
+  
+}
+
+.nav li a{
+  font-size: 13px;
+}
+
+
+/* Tag Cloud */
+#tag-cloud {
+ text-align: center;
+ 
+ 
+}
+#tag-cloud a {
+ margin: 0 0.2em;
+
+}
+.tag-cloud-0 { font-size: 100%;}
+.tag-cloud-1 { font-size: 120%;}
+.tag-cloud-2 { font-size: 140%;}
+.tag-cloud-3 { font-size: 160%;}
+.tag-cloud-4 { font-size: 180%;}
+.tag-cloud-5 { font-size: 200%;}
+    
+
+      
+
+    /* Forms  */ 
+
+.registration {
+  display: block;
+  position: relative;
+  left: 800px;
+  top: 50px;
+    } 
+
+
+
+/* Comment Form */
+
+
+
+/* SharedEvents */
+
+.sharedLists{
+  float: right;
+  margin-bottom: 0px;
+  font-family: 'Monda', sans-serif;
+  
+
+}
+
+#title{
+  text-align: left;
+}
+
+.sharedEvents h5{
+  display: inline-block;
+  margin-right: 30px;
+}
+
+#vote_arrow{
+  height:25px;
+}
+
+
+
+
+/* Event List */ 
+
+.event{
+  background: url(/static/img/linedpaper.png);
+  margin-top: 13px;
+  margin-right: 50px;
+  margin-left: 50px;
+
+}
+
+.user-page{
+  margin-right: 50px;
+}
+
+#profile{
+  margin-right: 50px;
+}
+
+#profile h4{
+  margin-left: 200px;
+
+}
+
+#event-title{
+  float:left;
+  margin-left: 10px;
+}
+
+#event-description{
+  float:left;
+ 
+}
+
+.tags{
+  margin-left: 20px;
+  margin-right: 20px;
+  padding:0;
+  list-style: none;
+  float:right;
+  
+}
+
+.tags a{
+  margin-left:20px;
+  padding:0 10px 0 12px;
+  background:#0089e0;
+  color:#fff;
+  text-decoration:none;
+  -moz-border-radius-bottomright:4px;
+  -webkit-border-bottom-right-radius:4px; 
+  border-bottom-right-radius:4px;
+  -moz-border-radius-topright:4px;
+  -webkit-border-top-right-radius:4px;  
+  border-top-right-radius:4px;  
+  } 
+
+.tags a:before{
+  content:"";
+  float:left;
+  position:absolute;
+  top:0;
+  left:-12px;
+  width:0;
+  height:0;
+  border-color:transparent #0089e0 transparent transparent;
+  border-style:solid;
+  border-width:12px 12px 12px 0;    
+  }
+
+.tags a:after{
+  content:"";
+  position:absolute;
+  top:10px;
+  left:0;
+  float:left;
+  width:4px;
+  height:4px;
+  -moz-border-radius:2px;
+  -webkit-border-radius:2px;
+  border-radius:2px;
+  background:#fff;
+  -moz-box-shadow:-1px -1px 2px #004977;
+  -webkit-box-shadow:-1px -1px 2px #004977;
+  box-shadow:-1px -1px 2px #004977;
+  }
+
+.tags a:hover{background:#555;} 
+
+.tags a:hover:before{border-color:transparent #555 transparent transparent;}
+
+.tags li, .tags a{
+  float:right;
+  height:24px;
+  line-height:24px;
+  position:relative;
+  font-size:11px;
+  }
+
+
+
+div.tags, div.tags li {
+display: inline;
+padding: 0;
+
+}
+
+
+/* Login Page */ 
+
+.span6{
+  margin-top: 50px;
+  position: relative;
+  left: 50px;
+  width:500px;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.span6 h1{
+  font-size: 150px;
+}
+
+.span6 blockquote{
+  margin-top: 50px;
+}
+
+.span6 img{
+  margin-top: 50px;
+  position: relative;
+  top: 20px;
+  left: 50px;
+}
+
+.span3 h4{
+  font-family: 'Shadows Into Light', cursive;
+}
+
+#login{
+  position: relative;
+  top: 120px;
+  right: 50px;
+}
+
+#register{
+  position: relative;
+  top: 70px;
+  right: 50px;
+
+}
+
+
+/* Search Page */ 
+
+#searchbutton{
+  
+  margin-top: 0px;
+}
+
+#searchform{
+  display: inline-block;
+}
+
+/* Profile Page */ 
+#profile{
+ background: url(/static/img/linedpaper.png);
+ padding-top: 10px;
+
+}
+
+#profile h4, button{
+  display: inline;
+  margin-right: 0px;
+  
+}
+
+
+
+
+#listbuttons button{
+  margin-right: 20px;
+  
+}
+
+
+#delete {
+  color: white;
+  text-decoration: none;
+
+  
+
+}
+
+#add{
+  color:white;
+  text-decoration: none;
+  
+}
+
+/* Event Save Page */ 
+
+#instructions h2, h5, p{
+  text-align: center;
+}
+
+#saveform {
+  position: relative;
+  right: 20px;
+  margin-top: 30px;
+}
+
+#eventsave{
+  height: 525px;
+}
+
+
+
+/* Main Page */ 
+
+
+
+    
+
+    /* Center align the text within the three columns below the carousel */
+    
+
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 30px;
+      margin-right: 100px;
+      margin-left: 100px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: black;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
+
+
+/* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }

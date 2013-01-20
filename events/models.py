@@ -31,6 +31,13 @@ class SharedEvent(models.Model):
       def __unicode__(self):
           return u'%s, %s' % (self.event, self.votes)
 
+class AccomplishedEvent(models.Model):
+      event = models.ForeignKey(Event, unique=True)
+      date = models.DateTimeField(auto_now_add=True)
+      def __unicode__(self):
+          return u'%s' % (self.event)
+
+
 class UserProfile(models.Model):
       user = models.ForeignKey(User)
       firstName = models.CharField(max_length= 100)

@@ -2,7 +2,7 @@ import re
 from django.contrib.auth.models import User
 from django import forms
 from django.core.files.images import get_image_dimensions
-from events.models import UserProfile
+from events.models import UserProfile, AccomplishedEvent
 
 class RegistrationForm(forms.Form):
     username = forms.CharField(label=u'Username', max_length=30)
