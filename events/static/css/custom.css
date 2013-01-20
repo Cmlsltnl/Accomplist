@@ -5,21 +5,50 @@
         padding-bottom: 60px;
         background: url(/static/img/gray_jean.png); 
         font-family: 'Monda', sans-serif;
-       
+        
       }
+
+body a{
+ 
+}
+
 
 /* Navbar */
 .topbar{
-background: url(/static/img/use_your_illusion.png); 
+background: url(/static/img/navyblue.png);  
 height: 130px;
 margin-top: 0px;
 position: relative;
 bottom: 20px;
 }
 
+.topbar_main{
+
+height: 130px;
+margin-top: 0px;
+position: relative;
+bottom: 20px;
+}
+
+.topbar_main #heading{
+
+color:black;
+}
+
+.topbar_main #nav a{
+  color:black;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.topbar_main #nav a:hover{
+  color:white;
+ 
+}
+
 
 #nav a:hover{
-  color:maroon;
+  color:black;
   
 }
 
@@ -115,7 +144,7 @@ bottom: 20px;
 /* Tag Cloud */
 #tag-cloud {
  text-align: center;
- width:750px;
+ 
  
 }
 #tag-cloud a {
@@ -153,12 +182,12 @@ bottom: 20px;
   float: right;
   margin-bottom: 0px;
   font-family: 'Monda', sans-serif;
-  width:750px;
+  
 
 }
 
-.sharedLists #title{
-  text-align: center;
+#title{
+  text-align: left;
 }
 
 .sharedEvents h5{
@@ -174,35 +203,36 @@ bottom: 20px;
 
 
 /* Event List */ 
-#userlist{
-  margin-bottom: 20px;
-  position: relative;
-  left: 200px;
-}
 
-#events{
-margin-top: 20px;
-width:1200px;
+.event{
+  background: url(/static/img/linedpaper.png);
+  margin-top: 13px;
+  margin-right: 50px;
+  margin-left: 50px;
 
 }
 
-#event{
-  
+.user-page{
+  margin-right: 50px;
 }
 
-#event-list{
+#profile{
+  margin-right: 50px;
+}
+
+#profile h4{
+  margin-left: 200px;
+
+}
+
+#event-title{
+  float:left;
+  margin-left: 10px;
+}
+
+#event-description{
+  float:left;
  
-  
-}
-
-.title{
-  float: left;
-  margin-right: 10px;
-}
-
-.user{
-  float: right;
-  display: inline-block;
 }
 
 .tags{
@@ -212,12 +242,6 @@ width:1200px;
   list-style: none;
   float:right;
   
-}
-
-.description{
-  width:500px;
-  
-  clear:left;
 }
 
 .tags a{
@@ -285,19 +309,6 @@ padding: 0;
 }
 
 
-#events{
-  margin-right: 30px;
-  margin-left: 30px;
-  padding: 10px;
-  width: 900px;
-}
-
-#events div{
-  display: inline-block;
-
-}
-
-
 /* Login Page */ 
 
 .span6{
@@ -354,46 +365,32 @@ padding: 0;
 
 /* Profile Page */ 
 #profile{
+ background: url(/static/img/linedpaper.png);
+ padding-top: 10px;
+
+}
+
+#profile h4, button{
+  display: inline;
+  margin-right: 0px;
   
 }
 
 
-#profile  h4{
-  text-align: center;
-  margin-bottom: 20px;
-  display: inline;
-  margin-left: 100px;
-}
 
-#profile h3, button{
-  float: right;
-  margin-right: 30px;
-}
 
-#profile button{
-  position: relative;
-  top: 53px;
-}
-
-#profiletitle{
-  text-align: center;
-}
-
-.listbuttons{
-  float: right;
-  position: relative;
-  bottom: 20px;
+#listbuttons button{
+  margin-right: 20px;
+  
 }
 
 
 #delete {
   color: white;
   text-decoration: none;
-}
 
-#accomplished{
-  color: white;
-  text-decoration: none;
+  
+
 }
 
 #add{
@@ -421,64 +418,158 @@ padding: 0;
 
 
 /* Main Page */ 
-#title1{
-  position: relative;
-  top: 200px;
-  font-family: 'Shadows Into Light', cursive;
-}
 
-#title2{
-  position: relative;
-  left: 640px;
-  bottom: 250px;
-  font-family: 'Shadows Into Light', cursive;
 
-}
 
-#discover{
-  width: 600px;
-  height: 400px;
-  position: relative;
-  left: 330px;
-  bottom: 75px;
-  box-shadow: 10px 10px 5px #888888;
-}
+    
 
-#create{
-  width: 600px;
-  height: 320px;
-  position: relative;
-  bottom: 10px;
-  box-shadow: 10px 10px 5px #888888;
-}
+    /* Center align the text within the three columns below the carousel */
+    
 
-#accomplish{
-  position: relative;
-  right:400px;
-  bottom: 50px;
-  font-family: 'Shadows Into Light', cursive;
-}
-#accomplish a{
-  color: white;
-}
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
 
-#signup{
-  font-family: 'Shadows Into Light', cursive;
-  position: relative;
-  bottom: 50px;
-  
-}
 
-#signup a{
-color: white;
-}
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 30px;
+      margin-right: 100px;
+      margin-left: 100px;
+    }
 
-#heading_main{
-  
-   font-family: 'Shadows Into Light', cursive;
-   font-size: 60px;
-   margin-top: 50px;
-   margin-left: 20px;
-   position: relative;
-   left: 180px;
-}
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: black;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
+
+
+/* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }

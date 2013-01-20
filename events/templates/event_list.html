@@ -1,52 +1,71 @@
 {% if events %}
 
-<div id="events">
-
 {% for event in events %}
 
-  <div class="well">
-    <div id="event-list">
-    
-    <div class="title">
-        <h5>{{ event.title }}</h5> 
-    </div>
+<div class=" span10 event well">
 
-    
+<div class="row-fluid">
+
+    <div class="span4">
+        <h5 id="event-title">{{ event.title }}</h5> 
+    </div>
 
      
-    
-    <div class="tags">
-    {% if show_tags %}
-        <h5><ul>
-      {% if event.tag_set.all %}
-        {% for tag in event.tag_set.all %}
-          <li>
-            <a href="/tag/{{ tag.name|urlencode }}/">{{ tag.name }}</a>
-          </li>
-        {% endfor %}
-        
-      {% else %}
-        None.
-      {% endif %}
-         </ul></h5>
-    {% endif %}
-    </div>
-    
+    <div class="span8">
+      <div class="tags">
+       {% if show_tags %}
+          <h5><ul>
+          {% if event.tag_set.all %}
+          {% for tag in event.tag_set.all %}
+            <li>
+              <a href="/tag/{{ tag.name|urlencode }}/">{{ tag.name }}</a>
+            </li>
+          {% endfor %}
 
-       
-    <div class="user">
-      {% if show_user %}
-      <h5>Posted by: <a href="/user/{{ event.user.username }}/" class="username">{{ event.user.username }}</a></h5>
+        {% else %}
+          None.
+        {% endif %}
+           </ul></h5>
       {% endif %}
+      </div>
     </div>
 
 </div>
-</div>
-{% endfor %}
+
+
+<div class="row-fluid">  
+   
+    <div class="span12" id="description">
+       <p id="event-description">{{ event.description }}</p>
+    </div>
 
 </div>
 
-  {% if show_paginator %}
+<div class="row-fluid">
+
+    <div class="span12" id="listbuttons">
+
+          <button class="btn btn-mini btn-danger pull-right"><a id="delete" href='/event/delete/{{event.id}}/'>Delete</a></button>
+          <button class="btn btn-mini btn-success pull-right"><a id="delete" href=''>Accomplished</a></button>     
+          
+    </div>   
+
+</div>   
+  <!--
+  Live Edit for List Doesn't Work
+  
+  {% if show_edit %}
+      <a href="/save/?url={{ event.title|urlencode }}" class="edit">[edit]</a>
+    {% endif %} 
+  -->
+    
+</div>
+ 
+    {% endfor %}
+
+
+   {% if show_paginator %}
+
 
   <div class="pagination">
     <ul>
@@ -68,6 +87,9 @@
   {% else %}
   <p>No Lists found.</p>
   {% endif %}
+
+</div>
+ 
 
   
   <!--

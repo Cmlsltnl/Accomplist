@@ -81,7 +81,8 @@ class UserProfileForm(forms.Form):
 
     tagline = forms.CharField(
             label=u'Describe Yourself in One Line',
-            widget=forms.TextInput(attrs={'size': 64})
+            max_length = 100,
+            widget = forms.Textarea
             )
 
     

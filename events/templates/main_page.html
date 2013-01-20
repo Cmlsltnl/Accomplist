@@ -1,42 +1,145 @@
-{% extends "base.html" %}
-            
- {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/static/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/static/css/custom.css" type="text/css" />
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+    {% block external %}
+    {% endblock %}
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Monda' rel='stylesheet' type='text/css'>
+    <!-- Fav and touch icons -->
+
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+    <body>
+
+         <div class="topbar_main">
+
+       
+       <ul class="nav nav-pills" id="nav" >
+
+       <a href="/"><h1 id="heading">Accomplist</h1></a>
+                        
+                    {% if user.is_authenticated %}
+                            <li ><a href="/logout/">Logout</a></li>
+                            <li ><a href="/settings/user">Settings</a></li>
+                            <li ><a href="/user/{{ user.username }}/">My Profile</a></li>
+                            <li ><a href="/save/">Create</a></li>
+                            <li ><a href="/search/">Search</a></li>
+                            
+                    {% else %}
+                            <li ><a href="/login/">Login</a></li>
+                            <li ><a href="/register/">Sign Up</a></li>
+                    {% endif %}
+                            <li><a href="/tag/">Tag Cloud</a></li>
+                            <li><a href="/popular/">Popular</a></li>
+                            
+        </ul>
+    </div>
 <!--  {% if user.username %}
         <h3>Welcome {{ user.username }}! Here you can store and share the things you want to accomplish!</h3>
         {% else %}
         <h3>Welcome! You need to <a href="/login/">login</a> or <a href="/register"> register</a>before you can store and share your Accomplist!</h3>
         {% endif %} -->
  
- <div class="well">
-
-    <h1 id="heading_main">Your Dreams. Your List!</h1>
-    <button id="signup" class="btn btn-large btn-primary" type="button"><a href="/register/">Sign Up!</a></button>
-    
-      <span id="title1">
-        <h1>Discover</h1>
-        <h2><small>Explore the ambitions of others.</small></h2>
-        <h2><small>Vote for the most interesting aspirations!</small></h2>
-      </span>
-
-    <img id="discover" class="img-polaroid" src="/static/img/discover.png"/>
-
-    <img id="create" class="img-polaroid" src="/static/img/create.png"/>
-
-        <span id="title2">
-            <h1>Create</h1>
-            <h2><small>Your Own List and Share It With Others</small></h2>
-            <h2><small></small></h2>
-        </span>
-
-     <button id="accomplish" class="btn btn-large btn-primary" type="button"><a href="/register/">Accomplish!</a></button>
-
-</div> 
+       <div id="myCarousel" class="carousel slide">
+           <div class="carousel-inner">
+             <div class="item active">
+                    <img src="/static/img/maingraphic.png" alt="">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Discover. Create. Accomplish</h1>
+                        <p class="lead">Create your own Accomplist and share it! Explore the aspirations and goals of other while voting for your favorites!</p>
+                        <a class="btn btn-large btn-success" href="/register/">Sign up today</a>
+                    </div>
+                </div>
+             </div>
+           </div>
+        </div>
 
 
+
+
+ <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container-fluid marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row-fluid">
+        <div class="span4">
+          <img class="img-circle" src="/static/img/discover.svg">
+          <h2>Discover</h2>
+          <p>Search different unique goals by keywords and tags. Explore the list of the most voted goals or scan through the most recent contributions by members. Find inspiration by discovering unique and amazing items from different Accomplists.</p>
+          <p><a class="btn" href="/popular/">Popular &raquo;</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <img class="img-circle" src="/static/img/create.svg">
+          <h2>Create</h2>
+          <p>So what to do with this new found excitement and inspiration? Create your own Accomplist! Give your individual items a name, and short description, and then link it up with as many as five tags.</p>
+          <p><a class="btn" href="/save/">Create &raquo;</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <img class="img-circle" src="/static/img/accomplish.svg">
+          <h2>Accomplish</h2>
+          <p>Work towards your goal! Finally as you achieve them, you can upload a picture and provide a brief description about your amazing Accomplistment. (This feature is still in beta)</p>
+          <p><a class="btn" href="/register/">Start Now! &raquo;</a></p>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
     
       
 
 
 
 
-{% endblock %}
+        
+    
+      
+
+      
+    </div> 
+
+     <footer>
+        &copy; Accomplist 2013
+    </footer>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap-transition.js"></script>
+    <script src="/static/js/bootstrap-alert.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-modal.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-dropdown.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-scrollspy.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-tab.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-tooltip.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-popover.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-button.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-collapse.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-carousel.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

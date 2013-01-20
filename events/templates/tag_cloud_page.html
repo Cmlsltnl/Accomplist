@@ -2,6 +2,9 @@
 {% block title %}Tag Cloud{% endblock %}
 {% block head %}Tag Cloud{% endblock %}
 {% block content %}
+
+<div class="span12">
+
 <div id="tag-cloud">
     <h3>Tag Cloud</h3>
     {% for tag in tags %}
@@ -9,5 +12,8 @@
         class="tag-cloud-{{ tag.weight }}">
         {{ tag.name }}</a>
     {% endfor %}
+</div>
+
+
 </div>
 {% endblock %}
