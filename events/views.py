@@ -11,7 +11,7 @@ from django.contrib.auth import authenticate, login
 from datetime import datetime, timedelta
 from django.db.models import Q
 from django.core.paginator import Paginator, InvalidPage
-ITEMS_PER_PAGE = 5
+ITEMS_PER_PAGE = 10
 
 def main_page(request):
 
