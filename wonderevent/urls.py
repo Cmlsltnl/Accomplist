@@ -43,6 +43,8 @@ urlpatterns = patterns('',
     url(r'^events/(\d+)/$', event_page),
 
         url(r'^event/delete/(\d+)/$', delete_event),
+
+        url(r'^event/achieve/(\d+)/$', achieve_event),
         # Comments
         url(r'^comments/', include('django.contrib.comments.urls')),
 

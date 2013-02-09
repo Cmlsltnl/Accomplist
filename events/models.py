@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from django.core.files.storage import FileSystemStorage
 
 
-
 class Instance(models.Model):
       listitem = models.CharField(max_length = 300)
       def __unicode__(self):
@@ -43,6 +42,8 @@ class UserProfile(models.Model):
       firstName = models.CharField(max_length= 100)
       lastName = models.CharField(max_length= 100)
       tagline = models.CharField(max_length = 300)
+      points = models.IntegerField(default=100)
       def __unicode__(self):
           return u'%s, %s' % (self.firstName, self.lastName)
+
 

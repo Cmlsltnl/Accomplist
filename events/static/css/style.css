@@ -203,6 +203,15 @@ color:black;
 
 
 /* Event List */ 
+#points{
+ color:white;
+ padding: 10px 10px 10px 10px;
+ background-color:#0044CC;
+ border-radius: 10px;
+ position: relative;
+ top: 10px;
+
+}
 
 .event{
   background: url(/static/img/linedpaper.png);
