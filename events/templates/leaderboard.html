@@ -1,0 +1,32 @@
+{% extends "base.html"%}
+{% block content %}
+
+
+<h1>Leaderboard</h1>
+
+
+  <table class="table table-hover">
+   
+    	<thead>
+    	   <tr>
+    		<th id="point_display">Username</th>
+   		<th id="point_display">Points</th>
+    	   </tr>
+    	</thead>
+    	<tbody>
+{% for userprofile in userprofiles %}
+    	   <tr>
+    		<td>{{ userprofile.user }}</td>
+    		<td>{{ userprofile.points }}</td>
+    	   </tr>
+{% endfor %}
+    	</tbody>
+  </table>
+
+
+
+
+
+
+
+{% endblock %}

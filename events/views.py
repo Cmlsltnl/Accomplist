@@ -71,7 +71,7 @@ def user_page(request, username):
     except InvalidPage:
         raise Http404
     events = page.object_list
-    userprofile = UserProfile.objects.get(user=user)
+    userprofile = UserProfile.objects.get(user=request.user)
     variables = RequestContext(request, {
         'events': events,
         'userprofile':userprofile,
@@ -348,3 +348,8 @@ def edit_profile_page(request,username):
     return render_to_response('profile_edit.html', variables)
 
 
+def leaderboard_page(request):
+    userprofiles = UserProfile.objects.order_by('-points').all()
+    variables = RequestContext(request, {
+            'userprofiles': userprofiles })
+    return render_to_response('leaderboard.html', variables)

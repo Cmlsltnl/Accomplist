@@ -16,6 +16,8 @@ urlpatterns = patterns('',
 
     url(r'^tag/$', tag_cloud_page),
 
+    url(r'^leaderboards/$',leaderboard_page),
+
         # Ajax
         url(r'^ajax/tag/autocomplete/$', ajax_tag_autocomplete),
 

@@ -12,7 +12,6 @@ class Event(models.Model):
       title = models.ForeignKey(Instance)
       description = models.TextField()
       user = models.ForeignKey(User)
-      
       def __unicode__(self):
           return u'%s, %s' % (self.user.username, self.title.listitem) 
 

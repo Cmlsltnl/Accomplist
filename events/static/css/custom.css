@@ -573,3 +573,9 @@ padding: 0;
       }
 
     }
+
+/* Leaderboard */
+
+#point_display{
+    display:inline-block;
+}
