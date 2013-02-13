@@ -71,7 +71,7 @@ def user_page(request, username):
     except InvalidPage:
         raise Http404
     events = page.object_list
-    userprofile = UserProfile.objects.get(user=request.user)
+    userprofile = UserProfile.objects.get(user=user)
     variables = RequestContext(request, {
         'events': events,
         'userprofile':userprofile,
@@ -330,7 +330,7 @@ def edit_profile_page(request,username):
         form = UserProfileForm(request.POST, request.FILES)
         if form.is_valid():
             user = get_object_or_404(User, username=username)
-        
+            userprof = UserProfile.objects.get(user=request.user).delete()
             userprofile, created = UserProfile.objects.get_or_create(
                 user=user,
                 firstName = form.cleaned_data['firstName'],
