@@ -20,6 +20,7 @@ class EventResource(ModelResource):
         resource_name = 'event'
 
 class SharedEventResource(ModelResource):
+    event = fields.ForeignKey(EventResource, 'event')
     class Meta:
 	queryset = SharedEvent.objects.all()
 	resource_name = 'sharedevent'
