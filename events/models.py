@@ -35,7 +35,6 @@ class AccomplishedEvent(models.Model):
       def __unicode__(self):
           return u'%s' % (self.event)
 
-
 class UserProfile(models.Model):
       user = models.ForeignKey(User)
       firstName = models.CharField(max_length= 100)
@@ -44,5 +43,4 @@ class UserProfile(models.Model):
       points = models.IntegerField(default=100)
       def __unicode__(self):
           return u'%s, %s' % (self.firstName, self.lastName)
-
 

@@ -3,11 +3,24 @@ from django.conf.urls import patterns, include, url
 from events.views import *
 from django.views.generic.simple import direct_to_template
 from django.contrib import admin
+from django.conf.urls.defaults import *
+from events.api import *
+from tastypie.api import Api
 admin.autodiscover()
+
+v1_api = Api(api_name='v1')
+v1_api.register(InstanceResource());
+v1_api.register(UserResource());
+v1_api.register(EventResource());
+v1_api.register(SharedEventResource());
+v1_api.register(TagResource());
+v1_api.register(UserProfileResource());
 
 
 urlpatterns = patterns('',
     
+    url(r'^api/',include(v1_api.urls)),
+
     url(r'^$', main_page),
     
     url(r'^popular/$', popular_page),    
