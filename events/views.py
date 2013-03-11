@@ -330,7 +330,9 @@ def edit_profile_page(request,username):
         form = UserProfileForm(request.POST, request.FILES)
         if form.is_valid():
             user = get_object_or_404(User, username=username)
-            userprof = UserProfile.objects.get(user=request.user).delete()
+            userprofcount = UserProfile.objects.get(user=request.user).count()
+            if userprofcount > 0:
+                userprof = UserProfile.objects.get(user=request.user).delete()
             userprofile, created = UserProfile.objects.get_or_create(
                 user=user,
                 firstName = form.cleaned_data['firstName'],
