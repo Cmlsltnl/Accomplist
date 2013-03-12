@@ -330,8 +330,7 @@ def edit_profile_page(request,username):
         form = UserProfileForm(request.POST, request.FILES)
         if form.is_valid():
             user = get_object_or_404(User, username=username)
-            userprofcount = UserProfile.objects.get(user=request.user).count()
-            if userprofcount > 0:
+            if UserProfile.objects.filter(user=request.user).exists():
                 userprof = UserProfile.objects.get(user=request.user).delete()
             userprofile, created = UserProfile.objects.get_or_create(
                 user=user,
@@ -349,6 +348,12 @@ def edit_profile_page(request,username):
             'form': form })
     return render_to_response('profile_edit.html', variables)
 
+def settings_page(request):
+    user = request.user
+    variables = RequestContext(request, {
+               'user': request.user,
+    })
+    return render_to_response('settings/settings.html', variables)
 
 def leaderboard_page(request):
     userprofiles = UserProfile.objects.order_by('-points').all()

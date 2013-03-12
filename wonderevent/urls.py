@@ -37,10 +37,12 @@ urlpatterns = patterns('',
         url(r'^tag/([^\s]+)/$', tag_page),
     
     url(r'^user/(\w+)/$',user_page),
-
+        
         url(r'^user/profile/(\w+)/$',edit_profile_page),
 
-        url(r'^settings/user$',direct_to_template, {'template': 'settings/settings.html'}),
+        url(r'^user/profile/change/$',edit_profile_page),
+
+        url(r'^settings/user$', settings_page),
 
         url(r'^settings/user/password/$', 'django.contrib.auth.views.password_change', {'post_change_redirect': '/settings/user/password-changed'}),
 
