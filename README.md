@@ -20,7 +20,5 @@ This web application was my first attempt at creating something substantial in D
 What I Learned
 ==============
 
-MVC (or MVT in this case) Design Pattern
-Django Templating
-Django ORM
+MVC (or MVT in this case) Design Pattern, Django Templating, Django ORM
 
